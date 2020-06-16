@@ -42,21 +42,88 @@ $faqs = [
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Google Faq</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <header>
+      <div id="header-wrapper">
+        <div class="header-top">
+          <img src="img/google.svg" alt="">
+          <h2 id="header-privacy">Privacy e termini</h2>
+        </div>
+        <div class="header-bottom">
+          <div class="navbar">
+            <ul class="lists list-menu">
+              <li>
+                 <a href="#">Introduzione</a>
+              </li>
+              <li>
+                 <a href="#">Norme sulla privacy</a>
+              </li>
+              <li>
+                 <a href="#">Termini di servizio</a>
+              </li>
+              <li>
+                 <a href="#">Tecnologie</a>
+              </li>
+              <li>
+                 <a href="#">Domande frequenti</a>
+              </li>
+            </ul>
+          </div>
+          <div class="email">
+            <img class="avatar" src="img/avatar.png" alt="">
+            <div class="own-email">
+              mario_rossi@gmail.com
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
     <div class="container">
       <?php
         foreach ($faqs as $faq) { ?>
           <div class="faq-box">
-            <h1><?php echo $faq['question']; ?></h1>
-            <p><?php echo $faq['answer']; ?></p>
+            <h1 class="title"><?php echo $faq['question']; ?></h1>
+            <p class="paragraph"><?php echo $faq['answer']; ?></p>
           </div>
           <?php
         }
        ?>
     </div>
+    <footer>
+      <div class="container">
+        <div id="footer-wrapper">
+            <div class="footer-left">
+                <ul class="lists footer-list">
+                  <li>
+                    <a href="#">Google</a>
+                  </li>
+                  <li>
+                    <a href="#">Tutto su google</a>
+                  </li>
+                  <li>
+                    <a href="#">Privacy</a>
+                  </li>
+                  <li>
+                    <a href="#">Termini</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer-right">
+                <select class="languages" name="languages">
+                  <option value="Italiano">Italiano</option>
+                  <option value="Inglese">Inglese</option>
+                  <option value="Spagnolo">Spagnolo</option>
+                  <option value="Tedesco">Tedesco</option>
+                  <option value="Francese">Francese</option>
+                </select>
+              </div>
+          </div>
+      </div>
+    </footer>
 
   </body>
 </html>
